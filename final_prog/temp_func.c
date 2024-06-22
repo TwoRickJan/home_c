@@ -46,7 +46,7 @@ void print_month_statistic(FILE *fp,int month){
     if(NuValue = NuValue_month_cnt(info,num_str_size,month)){
         printf("\n # Year Month NuValue ErValue MonthAvg MonthMax MonthMin\n");
         printf("%2d %4d  %2d %6d %7d %10.2f %8d %8d\n\n\n",month-1,YEAR,month,
-                                                NuValue+ErV[month-1],
+                                                NuValue,
                                                 ErV[month-1],
                                                 MonthAvgT(info,num_str_size,month),
                                                 MonthMaxT(info,num_str_size,month),
@@ -76,7 +76,7 @@ void print_year_statistic(FILE *fp)
     for(int i = 0;i<12;i++){
         if((NuValue = NuValue_month_cnt(info,num_str_size,i+1)))
             printf("%2d %4d  %2d %6d %7d %10.2f %8d %8d\n",i,YEAR,i+1,
-                                                NuValue+ErV[i],
+                                                NuValue,
                                                 ErV[i],
                                                 MonthAvgT(info,num_str_size,i+1),
                                                 MonthMaxT(info,num_str_size,i+1),
