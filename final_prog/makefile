@@ -1,11 +1,6 @@
 all: report.exe 
 	del *.o
-	cls
-	.\report.exe
 	.\report.exe -f temperature_big.csv
-	.\report.exe -f temperature_small.csv
-	.\report.exe -f temperature_small.csv -m 1
-
 
 report.exe: report.o temp_func.o
 	gcc -o report report.o temp_func.o
